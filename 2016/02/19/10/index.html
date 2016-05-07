@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>菜鸡的ACM之旅(1017) | Archemiya Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="A Mathematical CuriosityProblem DescriptionGiven two integers n and m, count the number of pairs of integers (a,b) such that 0 &amp;lt; a &amp;lt; b &amp;lt; n and (a^2+b^2 +m)/(ab) is an integer.
+This problem co">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜鸡的ACM之旅(1017)">
+<meta property="og:url" content="http://archemiya.com/2016/02/19/10/index.html">
+<meta property="og:site_name" content="Archemiya Zone">
+<meta property="og:description" content="A Mathematical CuriosityProblem DescriptionGiven two integers n and m, count the number of pairs of integers (a,b) such that 0 &amp;lt; a &amp;lt; b &amp;lt; n and (a^2+b^2 +m)/(ab) is an integer.
+This problem co">
+<meta property="og:updated_time" content="2016-02-20T06:37:36.316Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜鸡的ACM之旅(1017)">
+<meta name="twitter:description" content="A Mathematical CuriosityProblem DescriptionGiven two integers n and m, count the number of pairs of integers (a,b) such that 0 &amp;lt; a &amp;lt; b &amp;lt; n and (a^2+b^2 +m)/(ab) is an integer.
+This problem co">
+  
+    <link rel="alternative" href="/atom.xml" title="Archemiya Zone" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/Archemiya/Archemiya.github.io/master/img/Lphoto.ico">
+  
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Archemiya Zone</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Kick it</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/archemiya" title="Github" target="_blank"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://archemiya.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-10" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+<a href="/2016/02/19/10/" class="article-date">
+  <time datetime="2016-02-19T06:57:51.000Z" itemprop="datePublished">2016-02-19</time>
+</a>
+
+
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ACM/">ACM</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      菜鸡的ACM之旅(1017)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Mathematical-Curiosity"><span class="toc-number">1.</span> <span class="toc-text">A Mathematical Curiosity</span></a></li></ol>
+		
+		</div>
+		
+        <h1 id="A-Mathematical-Curiosity"><a href="#A-Mathematical-Curiosity" class="headerlink" title="A Mathematical Curiosity"></a><em>A Mathematical Curiosity</em></h1><p><strong>Problem Description</strong><br>Given two integers n and m, count the number of pairs of integers (a,b) such that 0 &lt; a &lt; b &lt; n and (a^2+b^2 +m)/(ab) is an integer.</p>
+<p>This problem contains multiple test cases!</p>
+<p>The first line of a multiple input is an integer N, then a blank line followed by N input blocks. Each input block is in the format indicated in the problem description. There is a blank line between input blocks.</p>
+<p>The output format consists of N output blocks. There is a blank line between output blocks.<br><a id="more"></a> </p>
+<p><strong>Input</strong><br>You will be given a number of cases in the input. Each case is specified by a line containing the integers n and m. The end of input is indicated by a case in which n = m = 0. You may assume that 0 &lt; n &lt;= 100.</p>
+<p><strong>Output</strong><br>For each case, print the case number as well as the number of pairs (a,b) satisfying the given property. Print the output for each case on one line in the format as shown below.</p>
+<p><strong>Sample Input</strong><br>1</p>
+<p>10 1<br>20 3<br>30 4<br>0 0</p>
+<p><strong>Sample Output</strong><br><figure class="highlight autoit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Case</span> <span class="number">1</span>: <span class="number">2</span></span><br><span class="line"><span class="keyword">Case</span> <span class="number">2</span>: <span class="number">4</span></span><br><span class="line"><span class="keyword">Case</span> <span class="number">3</span>: <span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>题目其实挺简单，难点在于输出。</p>
+<ol>
+<li><strong>There is a blank line between input blocks.</strong>题目要求是在两个输入块之间有一个空白行，也就是说最后一行是没有的。</li>
+<li><strong>There is a blank line between output blocks.</strong>同上。</li>
+<li><strong>The end of input is indicated by a case in which n = m = 0.</strong>意思是当n==0&amp;&amp;m==0的时候终止作业。</li>
+<li><strong>Sample Output</strong>注意输出的格式。</li>
+</ol>
+<p>代码如下：<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">include</span>&lt;stdio.<span class="keyword">h</span>&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int <span class="keyword">N</span>,i;</span><br><span class="line">    scanf(<span class="string">"%d"</span>,&amp;<span class="keyword">N</span>);</span><br><span class="line">    <span class="keyword">while</span>(<span class="keyword">N</span>--)&#123;</span><br><span class="line">        int <span class="keyword">n</span>,<span class="keyword">m</span>,index=1;</span><br><span class="line">        scanf(<span class="string">"%d%d"</span>,&amp;<span class="keyword">n</span>,&amp;<span class="keyword">m</span>);</span><br><span class="line">        <span class="keyword">while</span>(1)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(<span class="keyword">n</span>==0&amp;&amp;<span class="keyword">m</span>==0) <span class="comment">//这里是第三个问题的。</span></span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            int a,b,<span class="keyword">count</span>=0;</span><br><span class="line">            <span class="keyword">for</span>(a=1;a&lt;<span class="keyword">n</span>;++a)</span><br><span class="line">                <span class="keyword">for</span>(b=a+1;b&lt;<span class="keyword">n</span>;++b)</span><br><span class="line">                &#123;</span><br><span class="line">                    <span class="keyword">if</span>((a*a+b*b+<span class="keyword">m</span>)%(a*b)==0)</span><br><span class="line">                        <span class="keyword">count</span>++;</span><br><span class="line">                &#125;</span><br><span class="line">            printf(<span class="string">"Case %d: %d\n"</span>,index++,<span class="keyword">count</span>);<span class="comment">//这里要注意输出的格式</span></span><br><span class="line">            scanf(<span class="string">"%d%d"</span>,&amp;<span class="keyword">n</span>,&amp;<span class="keyword">m</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(<span class="keyword">N</span>)</span><br><span class="line">            printf(<span class="string">"\n"</span>);<span class="comment">//最后一个代码块是没有空白行的，不过第一个和第二个问题其实指的都是这里。</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+
+      
+    </div>
+    <footer class="article-footer">
+	  
+	  <!-- 百度分享 Start -->
+	  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+	  <!-- 百度分享 End -->
+	  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy/">easy</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2016-02-20T06:37:36.316Z" itemprop="dateModified">2016-02-20</time>
+</span>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/20/11/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          菜鸡的ACM之旅(1019)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/19/9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">菜鸡的ACM之旅(1014)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+</section>
+        
+          
+  <div id="toc" class="toc-aside">
+  <h2 class="toc-title">Contents</h2>
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#A-Mathematical-Curiosity"><span class="toc-number">1.</span> <span class="toc-text">A Mathematical Curiosity</span></a></li></ol>
+    
+  </div>
+
+<aside id="sidebar">
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">ABOUT ME</h3>
+  <ul class="widget about-me">
+    
+    <li><img class="author" title="About me" src="http://7xr34e.com1.z0.glb.clouddn.com/avatar.jpg" /></li>
+    
+    
+    <li>Hi,I'm Archemiya.</li>
+    
+    <li>This is my blog. Although I'm a freshman.</li>
+    
+  </ul>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ACM/">ACM</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Study/">Study</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easy/">easy</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/母函数/">母函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜文字/">颜文字</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://fanzheng.org" target="_BLANK">Fanzheng</a></li>
+    
+    <li><a href="http://xuchen.wang" target="_BLANK">YaCHEN</a></li>
+    
+  </ul>
+</div>
+
+
+  
+
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Archemiya<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/howiefh/hexo-theme-landscape-f" target="_blank" title="Landscape-F">Landscape-F</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'archemiya';
+  
+  var disqus_url = 'http://archemiya.com/2016/02/19/10/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<!-- 多说公共JS代码 end -->
+
+<!-- 百度分享 start -->
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","douban","bdysc","sqq","qq","hi","baidu","huaban","youdao","sdo","mail","xg","diandian","fx","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+-->
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+
+	<a class="icon-toc-toggle" href="javascript:void(0)" title="文章目录"></a>
+	<!--
+	<script src="/js/toc_aside_toggle.js"></script>
+	-->
+
+</div>
+<script src="/js/toc_aside_toggle.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>

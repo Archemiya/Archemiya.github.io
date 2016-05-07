@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>菜鸡的ACM之旅(1028) | Archemiya Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Ignatius and the Princess IIIProblem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.”The second problem is, given an positive">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜鸡的ACM之旅(1028)">
+<meta property="og:url" content="http://archemiya.com/2016/02/21/14/index.html">
+<meta property="og:site_name" content="Archemiya Zone">
+<meta property="og:description" content="Ignatius and the Princess IIIProblem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.”The second problem is, given an positive">
+<meta property="og:updated_time" content="2016-02-23T14:50:04.965Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜鸡的ACM之旅(1028)">
+<meta name="twitter:description" content="Ignatius and the Princess IIIProblem Description“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.”The second problem is, given an positive">
+  
+    <link rel="alternative" href="/atom.xml" title="Archemiya Zone" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/Archemiya/Archemiya.github.io/master/img/Lphoto.ico">
+  
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Archemiya Zone</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Kick it</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/archemiya" title="Github" target="_blank"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://archemiya.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-14" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+<a href="/2016/02/21/14/" class="article-date">
+  <time datetime="2016-02-21T00:52:04.000Z" itemprop="datePublished">2016-02-21</time>
+</a>
+
+
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ACM/">ACM</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      菜鸡的ACM之旅(1028)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ignatius-and-the-Princess-III"><span class="toc-number">1.</span> <span class="toc-text">Ignatius and the Princess III</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AC代码"><span class="toc-number">2.</span> <span class="toc-text">AC代码</span></a></li></ol>
+		
+		</div>
+		
+        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=31209733&auto=0&height=66"></iframe></p>
+<h1 id="Ignatius-and-the-Princess-III"><a href="#Ignatius-and-the-Princess-III" class="headerlink" title="Ignatius and the Princess III"></a><em>Ignatius and the Princess III</em></h1><p><strong>Problem Description</strong><br>“Well, it seems the first problem is too easy. I will let you know how foolish you are later.” feng5166 says.”The second problem is, given an positive integer N, we define an equation like this:<br>N=a[1]+a[2]+a[3]+…+a[m];a[i]&gt;0,1&lt;=m&lt;=N;<br>My question is how many different equations you can find for a given N.<br>For example, assume N is 4, we can find:<br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="symbol">4 </span>= <span class="number">4</span>;</span><br><span class="line"><span class="symbol">4 </span>= <span class="number">3</span> + <span class="number">1</span>;</span><br><span class="line"><span class="symbol">4 </span>= <span class="number">2</span> + <span class="number">2</span>;</span><br><span class="line"><span class="symbol">4 </span>= <span class="number">2</span> + <span class="number">1</span> + <span class="number">1</span>;</span><br><span class="line"><span class="symbol">4 </span>= <span class="number">1</span> + <span class="number">1</span> + <span class="number">1</span> + <span class="number">1</span>;</span><br></pre></td></tr></table></figure></p>
+<p>so the result is 5 when N is 4. Note that “4 = 3 + 1” and “4 = 1 + 3” is the same in this problem. Now, you do it!”<br><a id="more"></a><br><strong>Input</strong><br>The input contains several test cases. Each test case contains a positive integer N(1&lt;=N&lt;=120) which is mentioned above. The input is terminated by the end of file.</p>
+<p><strong>Output</strong><br>For each test case, you have to output a line contains an integer P which indicate the different equations you have found.</p>
+<p><strong>Sample Input</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">4</span><br><span class="line">10</span><br><span class="line">20</span><br></pre></td></tr></table></figure></p>
+<p><strong>Sample Output</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">5</span><br><span class="line">42</span><br><span class="line">627</span><br></pre></td></tr></table></figure></p>
+<p>HDOJ的这道题，是一个整数拆分的思想，例如把4拆成4或1+3或2+2或2+1+1或1+1+1+1，而指数多项式中的指数正好可以和这些拆分的数对应。</p>
+<p>解题思想就是将我们的问题建模成一个数学多项式的乘积的形式，然后将这个乘积展开，取得对应指数项的系数，则这个系数就是我们要求的值。<br>例如求上述问题的4，我们用$(1\times x^0+1\times x^1+1\times x^2+…)(1\times x^0+1\times x^2+1\times x^4+…)(1\times x^0+1\times x^3+1\times x^6+…)(1\times x^0+1\times x^4+1\times x^8+…)$这个多项式乘积来求解。<br>首先解释下$(1\times x^0+1\times x^1+1\times x^2+…)$这个式子的含义：<br>对于x的指数0，1，2，3…所表示的就是拆分出来的数字大小，比如0就是表示没有取到这个数字，1表示数字1，2就是表示数字2这样。但是这样又有个疑问就是在$(1\times x^0+1\times x^1+1\times x^2+1\times x^3+1\times x^4…)$就出现了0，1，2，3，4…，这样的话怎么能说第一个多项式只表示1的取到情况呢？是这样的，对于$1\times x^2$就是取到了2个1，（因为对于组合问题，我们采用乘法求解，所以用指数表示拆分出来的数字，就能让数字相加，这样就达到了我们的目的）也就是说当这个多项式乘积运算出来产生的一项，比如，$1\times x^4\times 1\times 1\times 1$就是表示取到了4个1，而其他的数字都没有取到 。</p>
+<p>那么对于解题思想先用两个多项式来解释：求指数为n的项的系数$(1+x+x^2+x^3+…)(1+x^2+x^4+…)$<br><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=0;i&lt;=<span class="keyword">n</span>;i++)<span class="comment">//i代表的是第一个多项式的每一项的指数</span></span><br><span class="line">	<span class="keyword">for</span>(k=0;k+i&lt;=<span class="keyword">n</span>;k+=2)<span class="comment">//k代表的是第二个多项式的每一项的指数</span></span><br><span class="line">	&#123;</span><br><span class="line">		c2[k+i]+=c1[j];<span class="comment">//对于c2数组我们以指数为下标来计数，这样c2数组就存储着相应指数的系数</span></span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure></p>
+<p>那么在上面的两个循环的遍历之下，我们就能求出两个多项式的展开式的每一项的系数。而每一个系数都存放在c2数组中，并以其相对应的指数作为下标。<br>最后的工作我们要将c2数组转移至c1数组存储：<br><figure class="highlight cos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(i=<span class="number">0</span><span class="comment">;i&lt;=n;i++)</span></span><br><span class="line">&#123;</span><br><span class="line">	c1[<span class="keyword">j</span>]=c2[<span class="keyword">j</span>]<span class="comment">;//最后的转移工作要明白一件事，就是在展开的多项式中，我们是以指数的大小为顺序来排练每一项的，所以只需要从0到n进行遍历即可</span></span><br><span class="line">	c2[<span class="keyword">j</span>]=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">for(i=<span class="number">0</span><span class="comment">;i&lt;=n;i++)//这里的i指的是砝码的重量，即我们对应过来的指数</span></span><br><span class="line">&#123;</span><br><span class="line">	c1[i]=<span class="number">1</span><span class="comment">;</span></span><br><span class="line">	c2[i]=<span class="number">0</span><span class="comment">;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">#<span class="keyword">include</span> &lt;stdio.<span class="keyword">h</span>&gt;</span><br><span class="line">int main(void)</span><br><span class="line">&#123;</span><br><span class="line">    int <span class="keyword">n</span>,a[10000],b[10000];</span><br><span class="line">    <span class="keyword">while</span>(scanf(<span class="string">"%d"</span>,&amp;<span class="keyword">n</span>)!=EOF)</span><br><span class="line">    &#123;</span><br><span class="line">        int i,j,k,<span class="keyword">m</span>,p;</span><br><span class="line">        <span class="keyword">for</span>(i=0;i&lt;=<span class="keyword">n</span>;i++)&#123;</span><br><span class="line">            a[i]=1;</span><br><span class="line">            b[i]=0;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(j=2;j&lt;=<span class="keyword">n</span>;j++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">m</span>=0;<span class="keyword">m</span>&lt;=<span class="keyword">n</span>;<span class="keyword">m</span>++)&#123;</span><br><span class="line">                <span class="keyword">for</span>(k=0;k+<span class="keyword">m</span>&lt;=<span class="keyword">n</span>;k+=j)&#123;</span><br><span class="line">                    b[k+<span class="keyword">m</span>]+=a[<span class="keyword">m</span>];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">for</span>(p=0;p&lt;=<span class="keyword">n</span>;p++)&#123;</span><br><span class="line">                a[p]=b[p];</span><br><span class="line">                b[p]=0;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        printf(<span class="string">"%d\n"</span>,a[<span class="keyword">n</span>]);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+	  
+	  <!-- 百度分享 Start -->
+	  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+	  <!-- 百度分享 End -->
+	  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy/">easy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/母函数/">母函数</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2016-02-23T14:50:04.965Z" itemprop="dateModified">2016-02-23</time>
+</span>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/23/13/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          菊次郎的夏天
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/20/12/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">菜鸡的ACM之旅(1021)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+</section>
+        
+          
+  <div id="toc" class="toc-aside">
+  <h2 class="toc-title">Contents</h2>
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Ignatius-and-the-Princess-III"><span class="toc-number">1.</span> <span class="toc-text">Ignatius and the Princess III</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AC代码"><span class="toc-number">2.</span> <span class="toc-text">AC代码</span></a></li></ol>
+    
+  </div>
+
+<aside id="sidebar">
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">ABOUT ME</h3>
+  <ul class="widget about-me">
+    
+    <li><img class="author" title="About me" src="http://7xr34e.com1.z0.glb.clouddn.com/avatar.jpg" /></li>
+    
+    
+    <li>Hi,I'm Archemiya.</li>
+    
+    <li>This is my blog. Although I'm a freshman.</li>
+    
+  </ul>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ACM/">ACM</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Study/">Study</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easy/">easy</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/母函数/">母函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜文字/">颜文字</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://fanzheng.org" target="_BLANK">Fanzheng</a></li>
+    
+    <li><a href="http://xuchen.wang" target="_BLANK">YaCHEN</a></li>
+    
+  </ul>
+</div>
+
+
+  
+
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Archemiya<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/howiefh/hexo-theme-landscape-f" target="_blank" title="Landscape-F">Landscape-F</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'archemiya';
+  
+  var disqus_url = 'http://archemiya.com/2016/02/21/14/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<!-- 多说公共JS代码 end -->
+
+<!-- 百度分享 start -->
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","douban","bdysc","sqq","qq","hi","baidu","huaban","youdao","sdo","mail","xg","diandian","fx","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+-->
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+
+	<a class="icon-toc-toggle" href="javascript:void(0)" title="文章目录"></a>
+	<!--
+	<script src="/js/toc_aside_toggle.js"></script>
+	-->
+
+</div>
+<script src="/js/toc_aside_toggle.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({"HTML-CSS": { preferredFont: "TeX", availableFonts: ["STIX","TeX"], linebreaks: { automatic:true }, EqnChunk: (MathJax.Hub.Browser.isMobile ? 10 : 50) },
+        tex2jax: { inlineMath: [ ["$", "$"], ["\\(","\\)"] ], processEscapes: true, ignoreClass: "tex2jax_ignore|dno",skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']},
+        TeX: {  noUndefined: { attributes: { mathcolor: "red", mathbackground: "#FFEEEE", mathsize: "90%" } }, Macros: { href: "{}" } },
+        messageStyle: "none"
+    }); 
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for(i=0; i < all.length; i += 1) {
+            all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+    });
+</script>
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+  </div>
+</body>
+</html>

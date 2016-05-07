@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>菜鸡的ACM之旅(1019) | Archemiya Zone</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Least Common Multiple (最小公倍数)Problem DescriptionThe least common multiple (LCM) of a set of positive integers is the smallest positive integer which is divisible by all the numbers in the set. For exa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="菜鸡的ACM之旅(1019)">
+<meta property="og:url" content="http://archemiya.com/2016/02/20/11/index.html">
+<meta property="og:site_name" content="Archemiya Zone">
+<meta property="og:description" content="Least Common Multiple (最小公倍数)Problem DescriptionThe least common multiple (LCM) of a set of positive integers is the smallest positive integer which is divisible by all the numbers in the set. For exa">
+<meta property="og:updated_time" content="2016-02-21T15:51:46.142Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="菜鸡的ACM之旅(1019)">
+<meta name="twitter:description" content="Least Common Multiple (最小公倍数)Problem DescriptionThe least common multiple (LCM) of a set of positive integers is the smallest positive integer which is divisible by all the numbers in the set. For exa">
+  
+    <link rel="alternative" href="/atom.xml" title="Archemiya Zone" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="https://raw.githubusercontent.com/Archemiya/Archemiya.github.io/master/img/Lphoto.ico">
+  
+  <link href="http://fonts.useso.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Archemiya Zone</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">Kick it</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-github-link" class="nav-icon" href="https://github.com/archemiya" title="Github" target="_blank"></a>
+        
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed" target="_blank"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://archemiya.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-11" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    
+<a href="/2016/02/20/11/" class="article-date">
+  <time datetime="2016-02-20T04:03:25.000Z" itemprop="datePublished">2016-02-20</time>
+</a>
+
+
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/ACM/">ACM</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      菜鸡的ACM之旅(1019)
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+		
+		<div id="toc" class="toc-article">
+			<h2 class="toc-title"><span>Contents</span></h2>
+		
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Least-Common-Multiple-最小公倍数"><span class="toc-number">1.</span> <span class="toc-text">Least Common Multiple (最小公倍数)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#欧几里得算法"><span class="toc-number">2.</span> <span class="toc-text">欧几里得算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AC代码"><span class="toc-number">3.</span> <span class="toc-text">AC代码</span></a></li></ol>
+		
+		</div>
+		
+        <h1 id="Least-Common-Multiple-最小公倍数"><a href="#Least-Common-Multiple-最小公倍数" class="headerlink" title="Least Common Multiple (最小公倍数)"></a><em>Least Common Multiple</em> (最小公倍数)</h1><p><strong>Problem Description</strong><br>The least common multiple (LCM) of a set of positive integers is the smallest positive integer which is divisible by all the numbers in the set. For example, the LCM of 5, 7 and 15 is 105.<br><a id="more"></a><br><strong>Input</strong><br>Input will consist of multiple problem instances. The first line of the input will contain a single integer indicating the number of problem instances. Each instance will consist of a single line of the form m n1 n2 n3 … nm where m is the number of integers in the set and n1 … nm are the integers. All integers will be positive and lie within the range of a 32-bit integer.</p>
+<p><strong>Output</strong><br>For each problem instance, output a single line containing the corresponding LCM. All results will lie in the range of a 32-bit integer.</p>
+<p><strong>Sample Input</strong><br><figure class="highlight basic"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br><span class="line"><span class="symbol">3 </span><span class="number">5</span> <span class="number">7</span> <span class="number">15</span></span><br><span class="line"><span class="symbol">6 </span><span class="number">4</span> <span class="number">10296</span> <span class="number">936</span> <span class="number">1287</span> <span class="number">792</span> <span class="number">1</span></span><br></pre></td></tr></table></figure></p>
+<p><strong>Sample Output</strong><br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">105</span><br><span class="line">10296</span><br></pre></td></tr></table></figure></p>
+<h1 id="欧几里得算法"><a href="#欧几里得算法" class="headerlink" title="欧几里得算法"></a>欧几里得算法</h1><p>两个整数的最大公约数等于其中较小的数和两数的相除余数的最大公约数。（ps.规定：任何数与0的最大公约数都等于这个数本身）<br>两个整数的最小公倍数等于两个整数的乘积除以两个整数的最大公约数。</p>
+<h1 id="AC代码"><a href="#AC代码" class="headerlink" title="AC代码"></a>AC代码</h1><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">gcd</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;return b?gcd(b,a%b):a;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">lcm</span><span class="params">(<span class="keyword">int</span> a,<span class="keyword">int</span> b)</span></span>&#123;return a/gcd(a,b)*b;&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> T,n,a,b;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;T);</span><br><span class="line">    <span class="keyword">while</span>(T--)&#123;</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">"%d%d"</span>,&amp;n,&amp;a);</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">            <span class="built_in">scanf</span>(<span class="string">"%d"</span>,&amp;b);</span><br><span class="line">            a=lcm(a,b);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">"%d\n"</span>,a);</span><br><span class="line">    &#125;</span><br><span class="line">    return <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这个是copy大神的代码，自己写的太长太臭，以后写代码的时候还是要多考虑结构等的问题，不然WA了都不知道错在哪( ´_ゝ｀)。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+	  
+	  <!-- 百度分享 Start -->
+	  <div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a></div>
+	  <!-- 百度分享 End -->
+	  
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/easy/">easy</a></li></ul>
+
+	  
+<span>
+Updated:<time datetime="2016-02-21T15:51:46.142Z" itemprop="dateModified">2016-02-21</time>
+</span>
+
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/02/20/12/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          菜鸡的ACM之旅(1021)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/02/19/10/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">菜鸡的ACM之旅(1017)</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+<!-- 多说评论框 start -->
+
+<!-- 多说评论框 end -->
+</section>
+        
+          
+  <div id="toc" class="toc-aside">
+  <h2 class="toc-title">Contents</h2>
+    
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Least-Common-Multiple-最小公倍数"><span class="toc-number">1.</span> <span class="toc-text">Least Common Multiple (最小公倍数)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#欧几里得算法"><span class="toc-number">2.</span> <span class="toc-text">欧几里得算法</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#AC代码"><span class="toc-number">3.</span> <span class="toc-text">AC代码</span></a></li></ol>
+    
+  </div>
+
+<aside id="sidebar">
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">ABOUT ME</h3>
+  <ul class="widget about-me">
+    
+    <li><img class="author" title="About me" src="http://7xr34e.com1.z0.glb.clouddn.com/avatar.jpg" /></li>
+    
+    
+    <li>Hi,I'm Archemiya.</li>
+    
+    <li>This is my blog. Although I'm a freshman.</li>
+    
+  </ul>
+</div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/ACM/">ACM</a><span class="category-list-count">10</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Study/">Study</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/杂谈/">杂谈</a><span class="category-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/easy/">easy</a><span class="tag-list-count">10</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/学习/">学习</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/母函数/">母函数</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/颜文字/">颜文字</a><span class="tag-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+<div class="widget-wrap">
+  <h3 class="widget-title">Links</h3>
+  <ul class="widget">
+    
+    <li><a href="http://fanzheng.org" target="_BLANK">Fanzheng</a></li>
+    
+    <li><a href="http://xuchen.wang" target="_BLANK">YaCHEN</a></li>
+    
+  </ul>
+</div>
+
+
+  
+
+</aside>
+
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2016 Archemiya<br>
+      Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and Theme by <a href="https://github.com/howiefh/hexo-theme-landscape-f" target="_blank" title="Landscape-F">Landscape-F</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'archemiya';
+  
+  var disqus_url = 'http://archemiya.com/2016/02/20/11/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//go.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+
+<!-- 多说公共JS代码 end -->
+
+<!-- 百度分享 start -->
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":["mshare","douban","bdysc","sqq","qq","hi","baidu","huaban","youdao","sdo","mail","xg","diandian","fx","copy","print"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+
+<!-- 百度分享 end -->
+
+<!--
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="/js/jquery.min.js"></script>
+-->
+<script src="/js/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<div class="bottom-btn">
+
+	<a class="icon-gotop" href="javascript:void(0)" title="返回顶部"></a>
+	<script src="/js/gotop.js"></script>
+	<!--
+	<script src="/js/gotop.js"></script>
+	-->
+
+
+	<a class="icon-toc-toggle" href="javascript:void(0)" title="文章目录"></a>
+	<!--
+	<script src="/js/toc_aside_toggle.js"></script>
+	-->
+
+</div>
+<script src="/js/toc_aside_toggle.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+  </div>
+</body>
+</html>
