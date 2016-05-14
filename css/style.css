@@ -158,7 +158,7 @@ body,
 }
 body {
   background: url("http://fh-1.qiniudn.com/bg.png") #eee;
-  font: 16px "consolas", "微软雅黑", "Hiragino Sans GB", sans-serif;
+  font: 14px "微软雅黑", "Hiragino Sans GB", sans-serif;
   -webkit-text-size-adjust: 100%;
 }
 .outer {
@@ -525,7 +525,7 @@ body {
   background: none;
   color: #555;
   width: 100%;
-  font: 13px "consolas", "微软雅黑", "Hiragino Sans GB", sans-serif;
+  font: 13px "微软雅黑", "Hiragino Sans GB", sans-serif;
   outline: none;
 }
 .search-form-input::-webkit-search-results-decoration,
@@ -659,7 +659,7 @@ a.article-title:hover {
 .article-entry video {
   max-width: 100%;
   height: auto;
-  display: block;
+  display: inline;
   margin: 0;
 }
 .article-entry iframe {
@@ -687,9 +687,9 @@ a.article-title:hover {
   margin-left: 45px;
 }
 .article-entry blockquote footer {
-  font-size: 16px;
+  font-size: 14px;
   margin: 1.6em 0;
-  font-family: "consolas", "微软雅黑", "Hiragino Sans GB", sans-serif;
+  font-family: "微软雅黑", "Hiragino Sans GB", sans-serif;
 }
 .article-entry blockquote footer cite:before {
   content: "—";
@@ -915,7 +915,7 @@ a.article-title:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font: 14px "consolas", "微软雅黑", "Hiragino Sans GB", sans-serif;
+  font: 14px "微软雅黑", "Hiragino Sans GB", sans-serif;
   padding: 0 15px;
   color: #555;
   outline: none;
@@ -1203,7 +1203,7 @@ a.article-title:hover {
   border-width: 1px 0;
   overflow: auto;
   color: #ccc;
-  line-height: 25.6px;
+  line-height: 22.400000000000002px;
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
@@ -1259,7 +1259,7 @@ a.article-title:hover {
   padding-right: 20px;
 }
 .article-entry .highlight .line {
-  height: 25.6px;
+  height: 22.400000000000002px;
 }
 .article-entry .gist {
   margin: 0 -1.2em;
@@ -1294,7 +1294,7 @@ a.article-title:hover {
 .article-entry .gist .gist-file .gist-meta {
   background: #2d2d2d;
   color: #999;
-  font: 0.85em "consolas", "微软雅黑", "Hiragino Sans GB", sans-serif;
+  font: 0.85em "微软雅黑", "Hiragino Sans GB", sans-serif;
   text-shadow: 0 0;
   padding: 0;
   margin-top: 1em;
@@ -1850,7 +1850,7 @@ pre .javascript .function {
   -webkit-border-radius: 3px;
   padding: 4px 5px;
   line-height: 16px;
-  font-size: 16px;
+  font-size: 14px;
 }
 .tag-list-link:hover,
 .archive-list-link:hover,
