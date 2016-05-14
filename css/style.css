@@ -596,8 +596,8 @@ a.article-category-link:hover {
 .article-title {
   text-decoration: none;
   font-size: 2em;
-  font-family: "微软雅黑";
   font-weight: bold;
+  font-style: oblique;
   color: #555;
   line-height: 1.1em;
   -webkit-transition: color 0.2s;
