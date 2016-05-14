@@ -596,7 +596,7 @@ a.article-category-link:hover {
 .article-title {
   text-decoration: none;
   font-size: 2em;
-  font-weight: normal;
+  font-weight: bold;
   font-family: SimHei;
   color: #555;
   line-height: 1.1em;
